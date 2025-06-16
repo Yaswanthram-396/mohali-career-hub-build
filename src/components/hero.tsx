@@ -90,7 +90,7 @@ const HeroSection = () => {
             }}
           />
         </div>
-        <div className="relative container mx-auto max-w-7xl px-4 py-12 md:py-16 lg:py-24">
+        <div className="relative container mx-auto max-w-7xl px-4 py-12 md:py-16 lg:pb-24 lg:pt:16">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="space-y-6 md:space-y-8 text-center lg:text-left">
               <div className="space-y-4">
