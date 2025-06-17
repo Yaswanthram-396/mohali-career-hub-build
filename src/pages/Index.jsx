@@ -353,38 +353,38 @@ const Index = () => {
         </section>
 
         {/* Events Section */}
-        <section className="index-section index-events-section">
-          <div className="index-content-container">
-            <div className="index-section-header">
-              <h2 className="index-section-title">
-                Upcoming <span className="text-gradient">Events & Updates</span>
-              </h2>
-              <p className="index-section-subtitle">Stay connected with the latest opportunities</p>
+        <section className="events-section">
+      <div className="events-container">
+        <div className="events-header">
+          <h2 className="events-title">
+            Upcoming <span className="highlight">Events & Updates</span>
+          </h2>
+          <p className="events-subtitle">Stay connected with the latest opportunities</p>
+        </div>
+        
+        <div className="events-grid">
+          {[
+            { badge: "Job Drive", title: "Mohali IT Job Fair 2024", desc: "Join us for the biggest IT job fair in Mohali with 50+ companies hiring.", status: "Coming Soon", icon: Briefcase },
+            { badge: "Partnership", title: "College Tie-up Program", desc: "Expanding our network with local engineering and management colleges.", status: "Ongoing", icon: Building2 },
+            { badge: "Skill Session", title: "Resume Building Workshop", desc: "Free workshop on creating industry-ready resumes for freshers.", status: "Every Saturday", icon: Calendar }
+          ].map((event, i) => (
+            <div key={i} className="event-card">
+              <div className="card-header">
+                <div className="header-content">
+                  <span className="badge">{event.badge}</span>
+                  <event.icon className="icon" />
+                </div>
+                <h3 className="card-title">{event.title}</h3>
+              </div>
+              <div className="card-content">
+                <p className="card-description">{event.desc}</p>
+                <span className="status-badge">{event.status}</span>
+              </div>
             </div>
-            
-            <div className="index-events-grid">
-              {[
-                { badge: "Job Drive", title: "Mohali IT Job Fair 2024", desc: "Join us for the biggest IT job fair in Mohali with 50+ companies hiring.", status: "Coming Soon", icon: Briefcase },
-                { badge: "Partnership", title: "College Tie-up Program", desc: "Expanding our network with local engineering and management colleges.", status: "Ongoing", icon: Building2 },
-                { badge: "Skill Session", title: "Resume Building Workshop", desc: "Free workshop on creating industry-ready resumes for freshers.", status: "Every Saturday", icon: Calendar }
-              ].map((event, i) => (
-                <Card key={i} className="index-event-card">
-                  <CardHeader className="index-event-header">
-                    <div className="index-event-meta">
-                      <Badge className="index-event-badge">{event.badge}</Badge>
-                      <event.icon className="index-event-icon" />
-                    </div>
-                    <CardTitle className="index-event-title">{event.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="index-event-content">
-                    <p className="index-event-desc">{event.desc}</p>
-                    <Badge variant="outline" className="index-event-status">{event.status}</Badge>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
+          ))}
+        </div>
+      </div>
+    </section>
 
         {/* FAQ Section */}
         <FAQSection/>
